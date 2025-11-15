@@ -1,0 +1,8 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DanielAdek/todo-list.git",
+  "author": "DanielAdek <maildaniel.me1@gmail.com>",
+  "license": "MIT"
+}
