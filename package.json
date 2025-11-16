@@ -5,8 +5,18 @@
   "repository": "https://github.com/DanielAdek/todo-list.git",
   "author": "DanielAdek <maildaniel.me1@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "yarn build && node dist/app",
+    "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec babel-node src/app"
+  },
   "dependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/node": "^7.28.0",
+    "@babel/preset-env": "^7.28.5",
     "express": "^5.1.0",
+    "nodemon": "^3.1.11",
     "pg": "^8.16.3",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.27"
