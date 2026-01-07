@@ -6,6 +6,17 @@ const app = express();
 
 app.use(express.json());
 
+const healthData = {
+  status: 'ok',
+  timestamp: new Date().toISOString(),
+  uptime: process.uptime(),
+  service: 'webhook-service',
+};
+
+app.get("/health", (_, res) => res.status(200).json(healthData))
+
+app.get("/", (_, res) => res.status(200).send("Todo App - Version 3"));
+
 // Routes
 app.use("/api/todos", todoRoutes);
 
